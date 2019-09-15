@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    home
+    <el-button type="warning" plain>就让比赛开始吧</el-button>
   </div>
 </template>
 

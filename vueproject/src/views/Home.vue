@@ -8,7 +8,7 @@
         <el-aside width="250px">
           <MenuBar></MenuBar>
         </el-aside>
-        <el-main>Main</el-main>
+        <el-main></el-main>
       </el-container>
     </el-container>
   </div>
@@ -42,12 +42,17 @@ export default {
     .el-header {
       display: flex;
       flex-direction: row-reverse;
+      justify-content: space-between;
       align-items: center;
       background: #232242;
     }
     .el-aside {
       height: 100%;
       background: #232242;
+    }
+    .el-main {
+      background: url('../assets/iron-man.gif') no-repeat center;
+      background-color: #AB0A1A;
     }
   }
 }

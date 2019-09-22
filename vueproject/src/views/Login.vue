@@ -56,14 +56,27 @@ export default {
       }
     };
   },
+  created() {
+    document.onkeydown = ev => {
+      if (ev.keyCode === 13) {
+        this.signIn('ruleForm')
+      }
+    };
+  },
   methods: {
     signIn(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          if (this.ruleForm.username === "302888601" && this.ruleForm.pass === "wqm13149591995.") {
+          if (
+            this.ruleForm.username === "302888601" &&
+            this.ruleForm.pass === "wqm13149591995."
+          ) {
             this.$router.push({ path: "/home" });
-            localStorage.setItem('token',this.ruleForm)
-          } else if (this.ruleForm.username !== "302888601" || this.ruleForm.pass !== "wqm13149591995.") {
+            localStorage.setItem("token", this.ruleForm);
+          } else if (
+            this.ruleForm.username !== "302888601" ||
+            this.ruleForm.pass !== "wqm13149591995."
+          ) {
             alert("用户名或密码错误！");
             return false;
           }

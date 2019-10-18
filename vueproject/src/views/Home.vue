@@ -8,7 +8,9 @@
         <el-aside width="250px">
           <MenuBar></MenuBar>
         </el-aside>
-        <el-main></el-main>
+        <el-main>
+          <router-view/>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -16,7 +18,6 @@
 
 <script>
 import MenuBar from "../components/home/menuBar";
-
 export default {
   name: "home",
   data() {

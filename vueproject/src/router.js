@@ -19,10 +19,17 @@ const router = new Router({
       name: 'home',
       component: Home,
       children: [
-        // {path: '', name: '', component: ()=>import()},
-        // {path: '', name: '', component: ()=>import()},
-        // {path: '', name: '', component: ()=>import()},
-        // {path: '', name: '', component: ()=>import()},
+        {path: '/home', redirect: '/home/littleGame'},
+        {
+          path: 'littleGame',
+          name: 'littleGame',
+          component: ()=>import('../src/components/home/littleGame'),
+          children: [
+            {path: '/home/littleGame', redirect: '/home/littleGame/retroSnake'},
+            {path: 'retroSnake', name: 'retroSnake', component: ()=>import('../src/components/littleGame/retroSnake.vue')},
+            {path: 'sokoban', name: 'sokoban', component: ()=>import('../src/components/littleGame/sokoban.vue')},
+          ]
+        },
       ]
     },
   ]

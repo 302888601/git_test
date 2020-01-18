@@ -71,13 +71,22 @@ export default {
             this.ruleForm.username === "302888601" &&
             this.ruleForm.pass === "wqm13149591995."
           ) {
+            this.$message({
+              showClose: true,
+              message: '登陆成功！',
+              type: 'success'
+            })
             this.$router.push({ path: "/home" });
             localStorage.setItem("token", this.ruleForm);
           } else if (
             this.ruleForm.username !== "302888601" ||
             this.ruleForm.pass !== "wqm13149591995."
           ) {
-            alert("用户名或密码错误！");
+            this.$message({
+              showClose: true,
+              message: '用户名或密码错误！',
+              type: 'warning'
+            });
             return false;
           }
         } else {
@@ -89,47 +98,52 @@ export default {
   components: {}
 };
 </script>
+<style lang="scss">
+  .el-message--warning,.el-message--success,.el-message--error,.el-message--info {
+    min-width: 250px
+  }
+</style>
 <style lang="scss" scoped>
-#login {
-  display: flex;
-  flex-direction: column;
-  background: url("../assets/bg.jpg"), no-repeat;
-  height: 100%;
-  width: 100%;
-  .wrap {
-    background: rgba($color: #1a1f3d, $alpha: 0.3);
+  #login {
+    display: flex;
+    flex-direction: column;
+    background: url("../assets/bg.jpg"), no-repeat;
     height: 100%;
-    width: 550px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 10px 0 5px #1a1f3d;
-    .login {
-      height: 60%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      .title {
-        flex: 2;
-        font-size: 50px;
-        color: #c84147;
-        font-weight: bolder;
-        text-shadow: -3px 3px 3px #fac926;
-        height: 150px;
-        text-align: center;
-        line-height: 400px;
-      }
-      .el-form {
-        flex: 1;
-        .el-input {
-          width: 350px;
-          background-color: transparent;
+    width: 100%;
+    .wrap {
+      background: rgba($color: #1a1f3d, $alpha: 0.3);
+      height: 100%;
+      width: 550px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      box-shadow: 10px 0 5px #1a1f3d;
+      .login {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .title {
+          flex: 2;
+          font-size: 50px;
+          color: #c84147;
+          font-weight: bolder;
+          text-shadow: -3px 3px 3px #fac926;
+          height: 150px;
+          text-align: center;
+          line-height: 400px;
+        }
+        .el-form {
+          flex: 1;
+          .el-input {
+            width: 350px;
+            background-color: transparent;
+          }
         }
       }
-    }
-    .blankSpace {
-      height: 40%;
-      width: 100%;
+      .blankSpace {
+        height: 40%;
+        width: 100%;
+      }
     }
   }
-}
 </style>

@@ -13,8 +13,8 @@
           <span>小游戏</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1" @click="changeView('/home/littleGame/retroSnake')">贪吃蛇</el-menu-item>
-          <el-menu-item index="1-2" @click="changeView('/home/littleGame/sokoban')">推箱子</el-menu-item>
+          <el-menu-item index="1-1" @click="changeView('retroSnake')">贪吃蛇</el-menu-item>
+          <el-menu-item index="1-2" @click="changeView('sokoban')">推箱子</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     changeView(path) {
-      this.$router.push({path: path})
+      this.$router.push({path: '/home/littleGame/' + path})
     },
   },
   components: {}
@@ -39,10 +39,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#menu {
-  height: 100%;
-  .el-menu {
-    border: 1px solid #232242;
+  #menu {
+    height: 100%;
+    .el-menu {
+      border: 1px solid #232242;
+    }
   }
-}
 </style>

@@ -36,25 +36,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#home {
-  height: 100%;
-  .el-container {
+  #home {
     height: 100%;
-    .el-header {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
-      background: #232242;
-    }
-    .el-aside {
+    .el-container {
       height: 100%;
-      background: #232242;
-    }
-    .el-main {
-      background: url('../assets/iron-man.gif') no-repeat center;
-      background-color: #AB0A1A;
+      .el-header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        background: #232242;
+      }
+      .el-aside {
+        height: 100%;
+        background: #232242;
+      }
+      .el-main {
+        position: relative;
+        background: url('../assets/iron-man.gif') no-repeat center;
+        background-color: #AB0A1A;
+      }
     }
   }
-}
 </style>

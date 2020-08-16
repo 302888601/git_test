@@ -3,7 +3,9 @@
     <div class="menu-page">
       <p class="title">贪吃蛇</p>
       <div class="menu-list">
-        <el-button type="warning">开始游戏</el-button>
+        <el-button type="warning">新的游戏</el-button>
+        <el-button type="warning">继续游戏</el-button>
+        <el-button type="warning">排行榜</el-button>
       </div>
     </div>
     <div v-if="isShowMask">

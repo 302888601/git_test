@@ -77,7 +77,7 @@ export default {
               type: 'success'
             })
             this.$router.push({ path: "/home" });
-            localStorage.setItem("token", this.ruleForm);
+            localStorage.setItem("token", JSON.stringify(this.ruleForm));
           } else if (
             this.ruleForm.username !== "302888601" ||
             this.ruleForm.pass !== "wqm13149591995."

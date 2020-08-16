@@ -1,0 +1,15 @@
+[
+    {
+        "title": "小游戏",
+        "children": [
+            {
+                "id": "retroSnake",
+                "name": "贪吃蛇"
+            },
+            {
+                "id": "sokoban",
+                "name": "推箱子"
+            }
+        ]
+    }
+]

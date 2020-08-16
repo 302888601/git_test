@@ -55,6 +55,7 @@ export default {
         position: relative;
         background: url('../assets/iron-man.gif') no-repeat center;
         background-color: #AB0A1A;
+        min-width: 1200px;
       }
     }
   }
